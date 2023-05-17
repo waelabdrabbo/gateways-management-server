@@ -13,6 +13,8 @@ const gatewaySchema = new mongoose.Schema({
   ipAddress: {
     type: String,
     required: true,
+    minLength: 7,
+    maxLength: 15,
     validate: {
       validator: function (value) {
         const pattern =
@@ -22,12 +24,10 @@ const gatewaySchema = new mongoose.Schema({
       message: props => `${props.value} is not a valid IP address`
     }
   },
-  devices: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Device'
-    }
-  ]
+  devices: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Device'
+  }]
 });
 
 const Gateway = mongoose.model('Gateway', gatewaySchema);

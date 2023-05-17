@@ -11,10 +11,10 @@ router.get('/gateways/:id', gatewayController.getGatewayById);
 // Route to add a new gateway
 router.post('/gateways', gatewayController.createGateway);
 
-// Delete a gateway by ID
+// Update a gateway by ID
 router.patch('/gateways/:id', gatewayController.updateGateway)
 
-// Update a gateway by ID
+// Delete a gateway by ID
 router.delete('/gateways/:id', gatewayController.deleteGateway)
 
 export default router;

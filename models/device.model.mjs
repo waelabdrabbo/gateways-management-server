@@ -21,9 +21,9 @@ const deviceSchema = new mongoose.Schema(
       default: 'offline'
     },
     gateway: {
-      type: mongoose.Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId, 
       ref: 'Gateway'
-    },
+    }
   },
   { timestamps: true }
 );
