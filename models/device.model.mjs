@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const deviceSchema = new mongoose.Schema(
   {
     uid: {
-      type: Number,
+      type: String,
       required: true,
       unique: true
     },

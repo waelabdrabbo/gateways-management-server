@@ -2,6 +2,7 @@ import Gateway from '../models/gateway.model.mjs';
 import Device from '../models/device.model.mjs';
 const deviceController = {};
 
+// Get all Devices Documents
 deviceController.getAllDevices = async (req, res) => {
   try {
     const devices = await Device.find().populate('gateway')
@@ -11,6 +12,7 @@ deviceController.getAllDevices = async (req, res) => {
   }
 };
 
+// add device into Gateway (without creating new document)
 deviceController.addDeviceToGateway = async (req, res) => {
   try {
     const { id } = req.params;
@@ -84,6 +86,7 @@ deviceController.deleteDevice = async (req, res) => {
   }
 }
 
+// Update a Device 
 deviceController.updateDevice = async (req, res) => {
   try {
     const device = await Device.findByIdAndUpdate(req.params.id, req.body, {
@@ -101,6 +104,7 @@ deviceController.updateDevice = async (req, res) => {
   }
 };
 
+// Create a Device
 deviceController.createDevice = async (req, res) => {
   try {
     const { uid, vendor, status } = req.body;

@@ -5,6 +5,7 @@ import gatewayController from "../controllers/gateway.controller.mjs";
 const router = express.Router();
 // Route to get all gateways
 router.get('/gateways', gatewayController.getAllGateways);
+
 // Route to get a gateway by ID
 router.get('/gateways/:id', gatewayController.getGatewayById);
 

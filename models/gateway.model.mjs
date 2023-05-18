@@ -30,6 +30,11 @@ const gatewaySchema = new mongoose.Schema({
   }]
 });
 
+gatewaySchema.path('devices').validate(function (value) {
+  // Custom validator function to check the maximum limit
+  return value.length <= 10;
+}, 'Maximum of 10 items allowed in the gateway array')
+
 const Gateway = mongoose.model('Gateway', gatewaySchema);
 
 export default Gateway;
