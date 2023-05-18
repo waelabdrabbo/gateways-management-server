@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"},{"v":{"$numberInt":"2"},"key":{"serialNumber":{"$numberInt":"1"}},"name":"serialNumber_1","background":true,"unique":true}],"uuid":"13711b2b28a147dda0dcd9e895a9dab4","collectionName":"gateways","type":"collection"}

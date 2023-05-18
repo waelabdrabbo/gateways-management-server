@@ -16,6 +16,7 @@ The project provides a REST service for performing CRUD operations on gateways a
 ## Installation
 
 Run `npm install` to install all the dependencies
+Run `mongorestore --db` gateways-management <directory_with_backup_files> - dumb files located db/dumb
 Run `node server.mjs ` for a NodeJS server.
 
 Set up the database connection by providing the necessary configuration details in `.env` file.
