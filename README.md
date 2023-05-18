@@ -1,4 +1,4 @@
-# Gateways Managment React
+# Gateways Managment NodeJS
 
 This sample project manages gateways - The REST service (JSON/HTTP) stores information about these gateways and their associated devices in a database.
 
@@ -15,7 +15,8 @@ The project provides a REST service for performing CRUD operations on gateways a
 
 ## Installation
 
-Run `npm run dev` for a dev server. Navigate to `http://localhost:5173/`. The app will automatically reload if you change any of the source files.
+Run `npm install` to install all the dependencies
+Run `node server.mjs ` for a NodeJS server.
 
 Set up the database connection by providing the necessary configuration details in `.env` file.
 
@@ -30,8 +31,7 @@ Limit of 10 peripheral devices per gateway
 ## Technologies
 
 The project is built using the following technologies:
-React
-Redux
+
 Node.js
 Express.js
 MongoDB
